@@ -18,9 +18,9 @@ function calculateTip(){
 
 	if (nOfPeople == "" || nOfPeople <= 1) 
 	{
-		alert("The total is: " + tip)
+		alert("Tip amount: " + tip)
 	} else {
-		alert("The total is: " + tip + " each")
+		alert("Tip amount: " + tip + " each")
 	}
 	
 }

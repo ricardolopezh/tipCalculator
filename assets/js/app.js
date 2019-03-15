@@ -11,25 +11,22 @@ function calculateTip(){
 		return
 	}
 
-	//Check if number of people is greater than 0
-	if (nOfPeople === "" || nOfPeople <= 1)
-	{
-		nOfPeople = 1;
-		//Do not display de word each
-	} else {
-		//Display the word each
-	}
-
 	//Calculate tip
 	var tip = (billAmount * (serviceQuality/100)) / nOfPeople;
 	tip = Math.round(tip * 100) / 100;
 	tip = tip.toFixed(2);
 
-	alert("The total is: " + tip)
+	if (nOfPeople == "" || nOfPeople <= 1) 
+	{
+		alert("The total is: " + tip)
+	} else {
+		alert("The total is: " + tip + " each")
+	}
+	
 }
 
 //Click to call function
 document.getElementById("calculate").onclick = function() {
-  calculateTip();
+	calculateTip();
 
 };
